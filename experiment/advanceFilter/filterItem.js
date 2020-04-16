@@ -11,11 +11,10 @@ export class FilterItem extends BaseAudioItem {
     }
 
     /**
-     * @param prevItem {BaseAudioItem}
-     * @param nextItem {BaseAudioItem}
+     * @param nextItem {!BaseAudioItem}
      */
-    enable(prevItem, nextItem) {
-        this.prevItem = prevItem;
+    enable(nextItem) {
+        this.prevItem = nextItem.prevItem;
         this.nextItem = nextItem;
 
         this.prevItem.node.disconnect();
