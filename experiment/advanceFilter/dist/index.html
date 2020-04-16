@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Web DJ的なツール</h1>
+<h2>音楽ファイルの指定</h2>
+<p>今はシングルトラックのみで動きます</p>
+<input type="file" id="audio-track">
+
+<div style="margin-top: 30px">
+    <div>
+        <label>
+            lowpass threshold(Hz):
+            <input type="number" value="2000" step="50" id="lowpass-threshold">
+        </label>
+        <button type="button" id="disable-lowpass" disabled>disable lowpass</button>
+        <button type="button" id="enable-lowpass">enable lowpass</button>
+    </div>
+
+    <div>
+        <label>
+            highpass threshold(Hz):
+            <input type="number" value="2000" step="50" id="highpass-threshold">
+        </label>
+        <button type="button" id="disable-highpass" disabled>disable highpass</button>
+        <button type="button" id="enable-highpass">enable highpass</button>
+    </div>
+
+    <div>
+        <label>
+            bandpass threshold(Hz):
+            <input type="number" value="3000" step="50" id="bandpass-threshold">
+        </label>
+        <button type="button" id="disable-bandpass" disabled>disable bandpass</button>
+        <button type="button" id="enable-bandpass">enable bandpass</button>
+    </div>
+
+    <div>
+        <label>
+            lowshelf threshold(Hz):
+            <input type="number" value="3000" step="50" id="lowshelf-threshold">
+        </label>
+        <button type="button" id="disable-lowshelf" disabled>disable lowshelf</button>
+        <button type="button" id="enable-lowshelf">enable lowshelf</button>
+    </div>
+
+    <div>
+        <label>
+            highshelf threshold(Hz):
+            <input type="number" value="3000" step="50" id="highshelf-threshold">
+        </label>
+        <button type="button" id="disable-highshelf" disabled>disable highshelf</button>
+        <button type="button" id="enable-highshelf">enable highshelf</button>
+    </div>
+
+    <div>
+        <label>
+            peaking threshold(Hz):
+            <input type="number" value="3000" step="50" id="peaking-threshold">
+        </label>
+        <button type="button" id="disable-peaking" disabled>disable peaking</button>
+        <button type="button" id="enable-peaking">enable peaking</button>
+    </div>
+
+    <div>
+        <label>
+            notch threshold(Hz):
+            <input type="number" value="3000" step="50" id="notch-threshold">
+        </label>
+        <button type="button" id="disable-notch" disabled>disable notch</button>
+        <button type="button" id="enable-notch">enable notch</button>
+    </div>
+
+    <div>
+        <label>
+            allpass threshold(Hz):
+            <input type="number" value="3000" step="50" id="allpass-threshold">
+        </label>
+        <button type="button" id="disable-allpass" disabled>disable allpass</button>
+        <button type="button" id="enable-allpass">enable allpass</button>
+    </div>
+
+</div>
+
+<p><a href="../../../index.html">トップへ</a></p>
+
+<script src="app.js"></script>
+</body>
+</html>
