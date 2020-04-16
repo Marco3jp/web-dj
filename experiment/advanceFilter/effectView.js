@@ -14,9 +14,6 @@ export class EffectView {
         this.enableElement = document.querySelector(`#enable-${effectName}`);
 
         this.disableElement.addEventListener("click", () => {
-            if (window.lastEffectItem === this.effectItem) {
-                window.lastEffectItem = this.effectItem.prevItem;
-            }
             this.disableElement.disabled = true;
             this.enableElement.disabled = false;
             this.effectItem.disable();
@@ -25,8 +22,7 @@ export class EffectView {
         this.enableElement.addEventListener("click", () => {
             this.disableElement.disabled = false;
             this.enableElement.disabled = true;
-            this.effectItem.enable(window.lastEffectItem, audioDestinationItem);
-            window.lastEffectItem = this.effectItem;
+            this.effectItem.enable(audioDestinationItem);
         });
 
         this.threholdElement.addEventListener("change", () => {
