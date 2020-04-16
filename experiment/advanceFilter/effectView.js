@@ -1,6 +1,12 @@
 import {FilterItem} from "./filterItem"
 
 export class EffectView {
+    /**
+     *
+     * @param audioContext
+     * @param effectName
+     * @param audioDestinationItem {AudioDestinationItem}
+     */
     constructor(audioContext, effectName, audioDestinationItem) {
         this.effectItem = new FilterItem(audioContext, effectName);
         this.threholdElement = document.querySelector(`#${effectName}-threshold`);
