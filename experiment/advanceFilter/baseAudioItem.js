@@ -1,7 +1,13 @@
 export class BaseAudioItem {
     constructor(audioNode) {
         this.node = audioNode;
+        /**
+         * @type {?BaseAudioItem}
+         */
         this.prevItem = null;
+        /**
+         * @type {?BaseAudioItem}
+         */
         this.nextItem = null;
     }
 
